@@ -54,6 +54,61 @@
       font-size: 0.9rem;
       padding: 2rem 0;
     }
+    .project {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .project-media {
+      flex: 0 0 220px;
+      max-width: 220px;
+      overflow: hidden;
+    }
+
+    .project-media img,
+    .project-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-info {
+      padding: 1rem 1.5rem;
+    }
+
+    .project-info h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .project-info .authors {
+      margin: 0.3rem 0;
+      color: #333;
+    }
+
+    .project-info .venue {
+      color: #666;
+      margin: 0.2rem 0 0.6rem;
+    }
+
+    .project-info .links a {
+      color: #0078d4;
+      font-weight: 500;
+    }
+
+    @media (max-width: 700px) {
+      .project {
+        flex-direction: column;
+      }
+      .project-media {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -80,14 +135,41 @@
         <li><strong>BRISK:</strong> Bidirectional Reverse Mamba for contact-rich manipulation learning.</li>
         <li>Exploring multi-modal 3D representation learning for fine-grained control.</li>
       </ul>
+
+      <!-- FP2AT -->
+      <div class="project">
+        <div class="project-media">
+          <!-- You can use <img> or <video> -->
+          <!-- <img src="xxx.png" alt="FP2AT project preview"> -->
+          <video src="assets\fp2at_2x_normal.gif" autoplay loop muted></video>
+        </div>
+
+        <div class="project-info">
+          <h3>
+            <a href="https://ieeexplore.ieee.org/abstract/document/10874177/" target="_blank">
+              Fusion-Perception-to-Action Transformer: Enhancing Robotic Manipulation with 3D Visual Fusion Attention and Proprioception
+            </a>
+          </h3>
+          <p class="authors">
+            <strong>Yangjun Liu</strong>, Sheng Liu, Binghan Chen, Zhi-Xin Yang, Sheng Xu
+          </p>
+          <p class="venue"><em>IEEE Transactions on Robotics, 2025</em></p>
+          <p class="links">
+            <a href="https://projectpage.example.com" target="_blank">project page</a> /
+            <a href="https://github.com/RealMarco/fp2at_ur_real" target="_blank">GitHub</a> /
+            <!-- <a href="https://twitter.com/example" target="_blank">twitter</a> /  -->
+            <!-- <a href="https://bibtex.example.com" target="_blank">bibtex</a> -->
+          </p>
+        </div>
+      </div>
     </section>
 
     <section>
       <h2>Contact</h2>
       <p>
-        📧 Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
-        🔗 GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a><br>
-        💼 LinkedIn: <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">linkedin.com/in/your-linkedin</a>
+        <a href="mailto:your.email@example.com">📧 Email</a><br>
+        <a href="https://github.com/your-username" target="_blank">🔗 GitHub</a><br>
+        <!-- <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">💼 LinkedIn</a> -->
       </p>
     </section>
   </main>
