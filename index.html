@@ -64,14 +64,25 @@
       overflow: hidden;
     }
     /* Base media styling (supports img, gif, or video) */
-    .project-media {
+    /* .project-media {
       flex: 0 0 220px;
       max-width: 220px;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
+    } */
+
+    .project-media {
+    flex: 0 0 220px;
+    max-width: 220px;
+    height: 160px; /* ensures consistent height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
 
     .project-media img,
     .project-media video {
@@ -197,7 +208,7 @@
           <p class="venue"><em>IEEE Transactions on Robotics, 2025</em></p>
           <p class="links">
             <!-- <a href="https://projectpage.example.com" target="_blank">Project Page</a> / -->
-            <a href="https://github.com/RealMarco/fp2at_ur_real" target="_blank">GitHub</a> /
+            <a href="https://github.com/RealMarco/fp2at_ur_real" target="_blank">GitHub</a> 
             <!-- <a href="https://twitter.com/example" target="_blank">twitter</a> /  -->
             <!-- <a href="https://bibtex.example.com" target="_blank">bibtex</a> -->
           </p>
@@ -222,7 +233,7 @@
           </p>
           <p class="venue"><em>ArXiv Preprint, 2025</em></p>
           <p class="links">
-            <a href="https://logssim.github.io/GPA_RAM_website/" target="_blank">Project Page</a> /
+            <a href="https://logssim.github.io/GPA_RAM_website/" target="_blank">Project Page</a> 
             <!-- <a href="https://github.com/RealMarco/fp2at_ur_real" target="_blank">GitHub</a> / -->
             <!-- <a href="https://twitter.com/example" target="_blank">twitter</a> /  -->
             <!-- <a href="https://bibtex.example.com" target="_blank">bibtex</a> -->
@@ -258,9 +269,9 @@
 
       <!-- robot_packing -->
       <div class="project">
-        <!-- Single image or video -->
-        <div class="project-media">
-          <img src="assets\SPSNN.png" alt="robot_packing project preview">
+        <div class="project-media multi">
+        <img src="assets\robot_packing.jpg" alt="robot_packing jpg">
+        <video src="assets\robot_packing.mp4" autoplay loop muted></video>
         </div>
 
         <div class="project-info">
@@ -273,12 +284,40 @@
             Yi Dong*, <strong>Yangjun Liu*</strong>, Jinjun Duan, Yang Li, Zhendong Dai
           </p>
           <p class="venue"><em>Robotics and Autonomous Systems, 2025</em></p>
-          <!-- <p class="links"> -->
-            <!-- <a href="https://logssim.github.io/GPA_RAM_website/" target="_blank">Project Page</a> / -->
-            <!-- <a href="https://github.com/RealMarco/fp2at_ur_real" target="_blank">GitHub</a> / -->
+          <p class="links">
+            <a href="https://github.com/RealMarco/keypointnet_ros" target="_blank">GitHub-Perception</a> /
+            <a href="https://gitlab.com/NUAADongyi/keypoint-based-shoe-packing" target="_blank">GitLab-Project</a> /
+            <a href="https://youtu.be/SD3P4M6EOkM" target="_blank">📺 Youtube</a> 
             <!-- <a href="https://twitter.com/example" target="_blank">twitter</a> /  -->
             <!-- <a href="https://bibtex.example.com" target="_blank">bibtex</a> -->
-          <!-- </p> -->
+          </p>
+        </div>
+      </div>
+
+      <!-- paper manipulation -->
+      <div class="project">
+        <div class="project-media multi">
+        <img src="assets\paper_manipulation.jpg" alt="robot_packing jpg">
+        <img src="assets\paper_manipulation.png" alt="robot_packing png">
+        </div>
+
+        <div class="project-info">
+          <h3>
+            <a href="https://realmarco.github.io/" target="_blank">
+              Grasping Strategies for Paper-Like Objects
+            </a>
+          </h3>
+          <p class="authors">
+            Yi Dong, Jinjun Duan, <strong>Yangjun Liu</strong>, Zhendong Dai, Poramate Manoonpong
+          </p>
+          <!-- <p class="venue"><em>Robotics and Autonomous Systems, 2025</em></p> -->
+          <p class="links">
+            <!-- <a href="https://github.com/RealMarco/keypointnet_ros" target="_blank">GitHub-Perception</a> / -->
+            <a href="https://gitlab.com/neutron-nuaa/robot-arm/-/tree/main/Paper_manipulation_and_shoe_packaging" target="_blank">GitLab-Project</a> /
+            <!-- <a href="https://youtu.be/SD3P4M6EOkM" target="_blank">📺 Youtube</a>  -->
+            <!-- <a href="https://twitter.com/example" target="_blank">twitter</a> /  -->
+            <!-- <a href="https://bibtex.example.com" target="_blank">bibtex</a> -->
+          </p>
         </div>
       </div>
 
@@ -288,9 +327,10 @@
     <section>
       <h2>Contact</h2>
       <p>
-        <a href="mailto:your.email@example.com">📧 Email</a><br>
-        <a href="https://github.com/your-username" target="_blank"> 💻 GitHub</a><br>
-        <a href="https://github.com/your-username" target="_blank"> 💻 Google Scholar</a><br>
+        <a href="mailto:yj.liu2@siat.ac.cn">📧 Email</a><br>
+        <a href="marco_ai_robotics">💬 Wechat: marco_ai_robotics</a><br>
+        <!-- <a href="https://github.com/your-username" target="_blank"> 💻 GitHub</a><br>
+        <a href="https://github.com/your-username" target="_blank"> 💻 Google Scholar</a><br> -->
         <!-- <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">💼 LinkedIn</a> -->
       </p>
     </section>
