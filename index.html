@@ -63,10 +63,14 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       overflow: hidden;
     }
+    /* Base media styling (supports img, gif, or video) */
     .project-media {
       flex: 0 0 220px;
       max-width: 220px;
       overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .project-media img,
@@ -75,6 +79,27 @@
       height: 100%;
       object-fit: cover;
       display: block;
+      border: none;
+    }
+
+    /* Multi-media container (two media per project) */
+    .project-media.multi {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem; /* spacing between stacked media */
+    }
+
+    .project-media.multi img,
+    .project-media.multi video {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    /* For two media horizontally instead of vertically */
+    .project-media.multi.horizontal {
+      flex-direction: row;
+      gap: 0.5rem;
     }
 
     .project-info {
@@ -101,12 +126,15 @@
       font-weight: 500;
     }
 
+    /* Responsive layout */
     @media (max-width: 700px) {
       .project {
         flex-direction: column;
       }
-      .project-media {
+      .project-media,
+      .project-media.multi {
         max-width: 100%;
+        flex-direction: row;
       }
     }
   </style>
@@ -138,10 +166,28 @@
 
       <!-- FP2AT -->
       <div class="project">
-        <div class="project-media">
-          <!-- You can use <img> or <video> -->
+        <!-- example: Two stacked media (vertical): -->
+        <!-- <div class="project-media multi">
+        <video src="demo.mp4" autoplay loop muted></video>
+        <img src="teaser.gif" alt="">
+        </div> -->
+        
+        <!-- example:  Two side-by-side media -->
+        <!-- <div class="project-media multi horizontal">
+        <img src="teaser1.gif" alt="">
+        <video src="demo2.mp4" autoplay loop muted></video>
+        </div> -->
+
+        <!-- Single image or video -->
+        <!-- <div class="project-media"> -->
           <!-- <img src="xxx.png" alt="FP2AT project preview"> -->
-          <video src="assets\fp2at_2x_normal.gif" autoplay loop muted></video>
+          <!-- <img src="assets\fp2at_2x_normal.gif" alt="FP2AT gif"> -->
+          <!-- <video src="assets\fp2at_2x_normal.mp4" autoplay loop muted></video> -->
+        <!-- </div> -->
+
+        <div class="project-media multi">
+        <img src="assets\fp2at.jpg" alt="FP2AT jpg">
+        <img src="assets\fp2at_2x_normal.gif" alt="FP2AT gif">
         </div>
 
         <div class="project-info">
@@ -168,7 +214,7 @@
       <h2>Contact</h2>
       <p>
         <a href="mailto:your.email@example.com">📧 Email</a><br>
-        <a href="https://github.com/your-username" target="_blank">🔗 GitHub</a><br>
+        <a href="https://github.com/your-username" target="_blank"> <i class="fa-brands fa-github"></i> GitHub</a><br>
         <!-- <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">💼 LinkedIn</a> -->
       </p>
     </section>
